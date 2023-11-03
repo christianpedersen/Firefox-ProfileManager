@@ -10,11 +10,7 @@ if (require('electron-squirrel-startup')) {
 let mainWindow = null
 
 function main() {
-  const displayIndex = 1;
-  const display = screen.getAllDisplays()[displayIndex];
   mainWindow = new BrowserWindow({
-    x: display.bounds.x + (display.bounds.width - 1024) / 2,
-    y: display.bounds.y + (display.bounds.height - 785) / 2,
     width: 1024,
     height: 785,
     autoHideMenuBar: true,

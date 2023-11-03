@@ -10,9 +10,10 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "makedeb": "electron-packager . app --platform linux --arch x64 --out dist/",
+    "build:package": "electron-packager . --out=out",
+    "build:snap": "electron-installer-snap --src=out/FirefoxProfileManager-linux-x64"    
   },
-  "keywords": [],
   "author": {
     "name": "Chrissebass"
   },
@@ -25,18 +26,21 @@
     "ejs": "^3.1.9",
     "electron-squirrel-startup": "^1.0.0",
     "express": "^4.18.2",
-    "fs-extra": "^11.1.1",
-    "moment": "^2.29.4"
+    "fs-extra": "^11.1.1"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.4.2",
     "@electron-forge/maker-deb": "^6.4.2",
-    "@electron-forge/maker-rpm": "^6.4.2",
     "@electron-forge/maker-dmg": "^6.4.2",
-    "@electron-forge/maker-wix": "^6.4.2",
+    "@electron-forge/maker-rpm": "^6.4.2",
     "@electron-forge/maker-squirrel": "^6.4.2",
+    "@electron-forge/maker-wix": "^6.4.2",
     "@electron-forge/maker-zip": "^6.4.2",
     "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
-    "electron": "27.0.2"
+    "electron": "27.0.2",
+    "electron-builder": "^24.6.4",
+    "electron-installer-debian": "^3.2.0",
+    "electron-installer-redhat": "^3.4.0",
+    "electron-installer-snap": "^5.2.0"
   }
 }

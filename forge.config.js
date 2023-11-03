@@ -8,7 +8,8 @@ module.exports = {
     {
       name: '@electron-forge/maker-squirrel',
       config: {
-        setupIcon: 'resources/icon/logo.ico'
+        setupIcon: 'resources/icon/logo_256.ico',
+        icon: 'resources/icon/logo.png'
       },
     },
     {
@@ -39,7 +40,7 @@ module.exports = {
     {
       name: '@electron-forge/maker-wix',
       config: {
-        icon: 'resources/icon/logo.ico'
+        icon: 'resources/icon/logo_256.ico'
       },
     },
   ],
