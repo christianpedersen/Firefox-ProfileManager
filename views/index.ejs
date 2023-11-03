@@ -1,0 +1,99 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title> <%- title %> </title>
+  <link rel="stylesheet" href="/assets/css/font-awesome-all.min.css" />
+  <link rel="stylesheet" href="/assets/css/index.css" />
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/assets/css/toastify.css">
+  <link rel="icon" type="image/x-icon" href="/public/assets/images/favicon/favicon.ico">
+</head>
+
+<body>
+  <section style="margin-top: 50px;">
+    <center>
+      <img src="/assets/images/logo_transparent.png" alt="" width="100px" height="100px">
+      <h1>Who's using Firefox?</h1>
+      <p>Just like Chrome's profile manager built with <a href="https://www.electronjs.org/">Electron</a>. 
+      <br>Create profiles for friends, family, or separate work and leisure activities.</p>
+    </center>
+  </section>
+  <section style="margin-top: 100px;">
+    <div id="profile_container"></div>
+    <br>
+  </section>
+
+<!-- Create modal -->
+  <div class="modal fade dark" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true"
+    id="profile_create_modal" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content" style="padding-top: 0px !important;">
+        <div class="modal-header">
+          <h5 class="modal-title">Create new profile</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+              <form>
+                <label for="name"><b>Profile name <span class="required">*</span></b></label>
+                <div class="mb-3">
+                  <input type="text" class="form-control" id="create_profile_modal_name" placeholder="Profile name">
+                </div>
+                <br>
+              </form>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn green-button" id="profile_modal_create_button">Create
+              profile</button>
+            <button type="button" class="btn red-button" data-bs-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Edit modal -->
+  <div class="modal fade dark" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true"
+  id="profile_edit_modal" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content" style="padding-top: 0px !important;">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit profile <span id="profile_edit_name"></span></h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+            <form>
+              <label for="name"><b>Profile name <span class="required">*</span></b></label>
+              <div class="mb-3">
+                <input type="text" class="form-control" id="edit_profile_modal_name" placeholder="Profile name">
+              </div>
+              <br>
+            </form>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn green-button" id="profile_modal_edit_button">Save changes</button>
+          <button type="button" class="btn red-button" data-bs-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="/assets/js/toastify.js"></script>
+  <script src="/assets/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/script.js"></script>
+</body>
+
+</html>
